@@ -70,7 +70,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                         .userLogin(
                                                 obj.getInt("id"),
                                                 obj.getString("username"),
-                                                obj.getString("email")
+                                                obj.getString("email"),
+                                                obj.getDouble("temperature"),
+                                                obj.getDouble("humidity"),
+                                                obj.getString("date")
                                         );
                                 startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                                 finish();

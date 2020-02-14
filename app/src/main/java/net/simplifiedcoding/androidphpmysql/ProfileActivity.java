@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class ProfileActivity extends AppCompatActivity {
 
 
-    private TextView textViewUsername, textViewUserEmail, textViewTemperature, textViewHumidity;
+    private TextView textViewUsername, textViewUserEmail, textViewTemperature, textViewHumidity, textViewDate;
 
 
     @Override
@@ -26,11 +26,17 @@ public class ProfileActivity extends AppCompatActivity {
 
         textViewUsername = (TextView) findViewById(R.id.textViewUsername);
         textViewUserEmail = (TextView) findViewById(R.id.textViewUseremail);
+
         textViewTemperature = (TextView) findViewById(R.id.tempView);
         textViewHumidity = (TextView) findViewById(R.id.humView);
+        textViewDate = (TextView) findViewById(R.id.dateView);
 
         textViewUserEmail.setText(SharedPrefManager.getInstance(this).getUserEmail());
         textViewUsername.setText(SharedPrefManager.getInstance(this).getUsername());
+
+        textViewTemperature.setText(SharedPrefManager.getInstance(this).getTemperature());
+        textViewHumidity.setText(SharedPrefManager.getInstance(this).getHumidity());
+        textViewDate.setText(SharedPrefManager.getInstance(this).getDate());
     }
 
     @Override
