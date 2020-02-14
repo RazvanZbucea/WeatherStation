@@ -34,8 +34,8 @@ public class ProfileActivity extends AppCompatActivity {
         textViewUserEmail.setText(SharedPrefManager.getInstance(this).getUserEmail());
         textViewUsername.setText(SharedPrefManager.getInstance(this).getUsername());
 
-        textViewTemperature.setText(SharedPrefManager.getInstance(this).getTemperature());
-        textViewHumidity.setText(SharedPrefManager.getInstance(this).getHumidity());
+        textViewTemperature.setText(SharedPrefManager.getInstance(this).getTemperature().toString());
+        textViewHumidity.setText(SharedPrefManager.getInstance(this).getHumidity().toString());
         textViewDate.setText(SharedPrefManager.getInstance(this).getDate());
     }
 

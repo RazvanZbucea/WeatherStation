@@ -42,8 +42,8 @@ public class SharedPrefManager {
         editor.putInt(KEY_USER_ID, id);
         editor.putString(KEY_USER_EMAIL, email);
         editor.putString(KEY_USERNAME, username);
-        editor.putFloat(KEY_TEMPERATURE, Float.parseFloat(temperature.toString()));
-        editor.putFloat(KEY_HUMIDITY, Float.parseFloat(humidity.toString()));
+        editor.putString(KEY_TEMPERATURE, temperature.toString());
+        editor.putString(KEY_HUMIDITY, humidity.toString());
         editor.putString(KEY_DATE, date);
 
         editor.apply();
